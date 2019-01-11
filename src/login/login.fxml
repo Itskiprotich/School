@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="366.0" prefWidth="582.0" stylesheets="@../resources/resources.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.FXMLDocumentController">
+   <children>
+      <FontAwesomeIconView glyphName="LOCK" layoutX="248.0" layoutY="243.0" size="40" />
+      <FontAwesomeIconView glyphName="USER" layoutX="246.0" layoutY="160.0" size="40" />
+      <JFXTextField fx:id="user_username" labelFloat="true" layoutX="302.0" layoutY="127.0" prefHeight="37.0" prefWidth="265.0" promptText="Username" />
+      <JFXPasswordField fx:id="user_password" labelFloat="true" layoutX="302.0" layoutY="210.0" onAction="#loginAction" prefHeight="37.0" prefWidth="265.0" promptText="Password" />
+      <JFXButton fx:id="user_cancel" buttonType="RAISED" layoutX="302.0" layoutY="295.0" onAction="#cancelAction" prefHeight="39.0" prefWidth="110.0" text="Cancel" />
+      <JFXButton fx:id="user_login" buttonType="RAISED" layoutX="439.0" layoutY="295.0" onAction="#loginAction" prefHeight="39.0" prefWidth="126.0" text="Login" />
+      <Label layoutX="64.0" layoutY="14.0" text="cheptarit  primary school " textFill="#88eb4f">
+         <font>
+            <Font name="Perpetua Titling MT Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="43.0" text="library management system" textFill="#88eb4f">
+         <font>
+            <Font name="Perpetua Titling MT Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

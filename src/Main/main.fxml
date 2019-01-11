@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mamaYao" stylesheets="@../resources/resources.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="babaYao" prefHeight="592.0" prefWidth="1152.0" stylesheets="@../resources/resources.css">
+          <children>
+              <MenuBar prefHeight="25.0" prefWidth="270.0">
+                  <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                          <items>
+                              <MenuItem fx:id="menuSettings" mnemonicParsing="false" onAction="#loadSettingsNow" text="Settings" />
+                              <MenuItem mnemonicParsing="false" text="Close" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Add">
+                          <items>
+                              <MenuItem fx:id="menu_new_book" mnemonicParsing="false" onAction="#newBook" text="New Book" />
+                              <MenuItem fx:id="menu_add_student" mnemonicParsing="false" onAction="#newStudent" text="New Student" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="View">
+                          <items>
+                              <MenuItem fx:id="menu_book_list" mnemonicParsing="false" onAction="#bookdList" text="Available Books" />
+                              <MenuItem fx:id="menu_students_list" mnemonicParsing="false" onAction="#studentList" text="Registered Students" />
+                              <MenuItem fx:id="menu_issued_list" mnemonicParsing="false" onAction="#issuedList" text="Issued Books" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Notifications">
+                          <items>
+                              <MenuItem fx:id="menu_over" mnemonicParsing="false" onAction="#openNotifications" text="Overdues" />
+                          </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                          <items>
+                              <MenuItem fx:id="menu_about" mnemonicParsing="false" onAction="#loadAbout" text="About Us" />
+                              <MenuItem mnemonicParsing="false" text="User Manual" />
+                          </items>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+                  <JFXButton fx:id="newStudent" contentDisplay="TOP" layoutX="14.0" layoutY="35.0" onAction="#newStudent" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="New Student">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="USER" size="25" />
+                      </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="studentList" contentDisplay="TOP" layoutX="150.0" layoutY="34.0" onAction="#studentList" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="Student List">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="TABLE" size="25" />
+                      </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="newBook" contentDisplay="TOP" layoutX="288.0" layoutY="34.0" onAction="#newBook" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="New Book">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="BOOK" size="25" />
+                      </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="bookList" contentDisplay="TOP" layoutX="425.0" layoutY="34.0" onAction="#bookdList" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="BookList">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="TABLE" size="25" />
+                      </graphic>
+                  </JFXButton>
+                
+                              <JFXButton fx:id="issuedList" contentDisplay="TOP" layoutX="562.0" layoutY="34.0" onAction="#issuedList" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="Issued Books">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="CHECK" size="25" />
+                      </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="notify_button" contentDisplay="TOP" layoutX="698.0" layoutY="34.0" onAction="#openNotifications" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="Notifications">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="BELL" size="25" />
+                      </graphic>
+                  </JFXButton>
+            
+                              <JFXButton fx:id="settingsButton" contentDisplay="TOP" layoutX="834.0" layoutY="34.0" mnemonicParsing="false" onAction="#loadSettingsNow" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="Settings" textAlignment="CENTER">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="COG" size="25" />
+                      </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="logout" contentDisplay="TOP" layoutX="972.0" layoutY="34.0" onAction="#logoutAction" prefHeight="68.0" prefWidth="130.0" styleClass="toolbar-button" text="Logout">
+                      <graphic>
+                          <FontAwesomeIconView glyphName="REMOVE" size="25" />
+                      </graphic>
+                  </JFXButton>
+            <Pane layoutX="12.0" layoutY="118.0" prefHeight="445.0" prefWidth="1151.0">
+               <children>
+                  <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab styleClass="tab-main" text="Issue Book">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="905.0">
+                                 <children>
+                                    <JFXButton fx:id="issueButton" buttonType="RAISED" layoutX="293.0" layoutY="322.0" onAction="#issuedBookToStudent" prefHeight="39.0" prefWidth="157.0" text="Issue" />
+                                    <VBox alignment="CENTER" layoutX="178.0" layoutY="28.0" spacing="20.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="BOOK" size="30" />
+                                          <JFXTextField fx:id="bookIDInput" labelFloat="true" onAction="#searchBookId" prefHeight="26.0" prefWidth="230.0" promptText="Book Number" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" layoutX="178.0" layoutY="193.0" spacing="20.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="USER" size="30" />
+                                          <JFXTextField fx:id="studeesearch" labelFloat="true" onAction="#searchStudentId" prefHeight="26.0" prefWidth="230.0" promptText="Student Reg No" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" layoutX="450.0" layoutY="72.0" prefHeight="87.0" prefWidth="402.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="bookName" textFill="WHITE">
+                                             <font>
+                                                <Font name="Perpetua Titling MT Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="bookAuthor" textFill="WHITE">
+                                             <font>
+                                                <Font name="Perpetua Titling MT Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="Bookstatus" textFill="WHITE">
+                                             <font>
+                                                <Font name="Perpetua Titling MT Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" layoutX="454.0" layoutY="237.0" prefHeight="53.0" prefWidth="450.0" spacing="20.0">
+                                       <children>
+                                          <Label fx:id="studentName" textFill="WHITE">
+                                             <font>
+                                                <Font name="Perpetua Titling MT Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="studentNumber" textFill="WHITE">
+                                             <font>
+                                                <Font name="Perpetua Titling MT Bold" size="11.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab styleClass="tab-main" text="Submit">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="996.0">
+                                 <children>
+                                    <JFXTextField fx:id="bookSearchNumber" labelFloat="true" layoutX="271.0" layoutY="14.0" onAction="#userProfileHere" promptText="Book Number" />
+                                    <HBox layoutX="61.0" layoutY="103.0" prefHeight="211.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane fx:id="userProfileHere" prefHeight="195.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                                             <children>
+                                                <FontAwesomeIconView glyphName="USER" layoutX="89.0" layoutY="40.0" size="30" />
+                                                <Label fx:id="jinayastudee" layoutX="14.0" layoutY="67.0" text="JAPHETH KIPROTICH" textFill="WHITE" />
+                                                <Label fx:id="emailyastudee" layoutX="14.0" layoutY="123.0" text="Jeff@gmail.com" textFill="WHITE" />
+                                                <Label fx:id="simuyastudee" layoutX="14.0" layoutY="94.0" text="+254724743788" textFill="WHITE" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="285.0" layoutY="103.0">
+                                       <children>
+                                          <Pane fx:id="bookDetailsIssues" prefHeight="210.0" prefWidth="204.0" style="-fx-background-color: red;">
+                                             <children>
+                                                <FontAwesomeIconView glyphName="BOOK" layoutX="89.0" layoutY="40.0" size="30" />
+                                                <Label fx:id="titleofBook" layoutX="14.0" layoutY="67.0" text="SHAMBA LA WANYAMA" textFill="WHITE" />
+                                                <Label fx:id="publisherofBook" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="123.0" opacity="0.9" text="JKIF" textAlignment="CENTER" textFill="WHITE" />
+                                                <Label fx:id="authorofBook" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="94.0" text="JEFF" textFill="WHITE" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                    <Pane fx:id="daysIssued" layoutX="518.0" layoutY="103.0" prefHeight="213.0" prefWidth="204.0" style="-fx-background-color: blue;">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="CALENDAR" layoutX="89.0" layoutY="40.0" size="30" />
+                                          <Label fx:id="datehereIssued" layoutX="14.0" layoutY="67.0" text="18-12-2018  10:00 PM" textFill="WHITE" />
+                                          <Label fx:id="usedFor" layoutX="14.0" layoutY="94.0" text="Used for 2 Days" textFill="WHITE" />
+                                       </children>
+                                    </Pane>
+                                    <JFXButton fx:id="renewBook" buttonType="RAISED" layoutX="271.0" layoutY="337.0" onAction="#renewBook" prefHeight="39.0" prefWidth="156.0" text="Submit" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </Pane>
+          </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="mamaYao" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="873.0" stylesheets="@../resources/resources.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentList.StudentListController">
+   <children>
+      <AnchorPane fx:id="babaYao" prefHeight="200.0" prefWidth="200.0" />
+      <TableView fx:id="bookListTable" prefHeight="400.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="Bn" prefWidth="147.0" text="Student Number" />
+            <TableColumn fx:id="Bt" prefWidth="235.0" text="Student Name" />
+            <TableColumn fx:id="Ba" prefWidth="227.0" text="Phone" />
+            <TableColumn fx:id="Bp" prefWidth="258.0" text="Email Address" />
+         </columns>
+      </TableView>
+   </children>
+</StackPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mamaYao" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="735.0" stylesheets="@../resources/resources.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Notification.NotificationsController">
+   <children>
+      <Pane>
+         <children>
+            <TableView fx:id="bookListTable" layoutY="57.0" prefHeight="327.0" prefWidth="735.0">
+               <columns>
+                  <TableColumn fx:id="Bn" prefWidth="147.0" text="Student Number" />
+                  <TableColumn fx:id="Bt" prefWidth="134.0" text="Student Name" />
+                  <TableColumn fx:id="Ba" prefWidth="216.0" text="Phone" />
+                  <TableColumn fx:id="Bp" prefWidth="232.0" text="Email Address" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="229.0" layoutY="396.0" prefHeight="39.0" prefWidth="163.0" text="Send Overdue" />
+            <Label layoutX="236.0" layoutY="10.0" text="send overdue to users" textFill="WHITE">
+               <font>
+                  <Font name="Perpetua Titling MT Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

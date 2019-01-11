@@ -1,0 +1,1 @@
+{"username":"Japhee","password":"70875fe7aa9f60b30f01f4a2c8562bc257eed414","nDaysWithoutFine":15,"finePerDay":12.0}

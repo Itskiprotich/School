@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="babaYao" prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/resources.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settings.UserSettingsController">
+   <children>
+      <JFXTextField fx:id="no_of_days_allowed" labelFloat="true" layoutX="29.0" layoutY="47.0" prefHeight="37.0" prefWidth="553.0" promptText="Days Allowed" />
+      <JFXTextField fx:id="fine_per_day" labelFloat="true" layoutX="24.0" layoutY="110.0" prefHeight="37.0" prefWidth="553.0" promptText="Fine per Day" />
+      <JFXTextField fx:id="user_name" labelFloat="true" layoutX="24.0" layoutY="182.0" prefHeight="37.0" prefWidth="553.0" promptText="Username" />
+      <JFXButton fx:id="saveBook" buttonType="RAISED" layoutX="246.0" layoutY="325.0" onAction="#saveBook" prefHeight="39.0" prefWidth="165.0" text="Save Settings" />
+      <JFXPasswordField fx:id="user_password" labelFloat="true" layoutX="24.0" layoutY="244.0" prefHeight="37.0" prefWidth="553.0" promptText="Password" />
+   </children>
+</AnchorPane>

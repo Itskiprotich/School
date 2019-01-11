@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane fx:id="mamaYao" stylesheets="@../resources/resources.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddBook.AddbookController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="babaYao" prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/resources.css">
+         <children>
+            <JFXTextField fx:id="book_no" labelFloat="true" layoutX="29.0" layoutY="47.0" prefHeight="37.0" prefWidth="553.0" promptText="Book Number" />
+            <JFXTextField fx:id="book_title" labelFloat="true" layoutX="24.0" layoutY="110.0" prefHeight="37.0" prefWidth="553.0" promptText="Book Title" />
+            <JFXTextField fx:id="book_author" labelFloat="true" layoutX="24.0" layoutY="182.0" prefHeight="37.0" prefWidth="553.0" promptText="Author" />
+            <JFXTextField fx:id="book_publisher" labelFloat="true" layoutX="24.0" layoutY="259.0" prefHeight="37.0" prefWidth="553.0" promptText="Publisher" />
+            <JFXButton fx:id="cancelBook" buttonType="RAISED" layoutX="276.0" layoutY="313.0" onAction="#cancelBook" prefHeight="39.0" prefWidth="108.0" text="Cancel" />
+            <JFXButton fx:id="saveBook" buttonType="RAISED" layoutX="469.0" layoutY="313.0" onAction="#saveBook" prefHeight="39.0" prefWidth="108.0" text="Save Book" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
